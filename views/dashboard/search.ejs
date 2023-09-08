@@ -1,0 +1,21 @@
+<div class="container-fluid container-fluid-custom pb-5 mb-5">
+
+  <div class="row">
+    <% if(searchResults !='' ) { %>
+      <% searchResults.forEach(function (note, index) { %>
+
+        <a href="/dashboard/item/<%= note._id %>">
+          <h4>
+            <%= note.title %>
+          </h4>
+        </a>
+
+        <% }) %>
+          <% } else { %>
+            <p style="color: black; font-size:larger;">Opps! No Matches Found...</p>
+            <p style="color: black; font-size:larger;">Try a Different Search</p>
+            <% } %>
+
+  </div>
+
+</div>
